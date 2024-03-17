@@ -1,1 +1,3 @@
-server/.gitignore
+.gitignore
+.DS_Store
+/node_modules
