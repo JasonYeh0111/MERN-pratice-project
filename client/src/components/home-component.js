@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const HomeComponent = ({ currentUser, setCurrentUser }) => {
+  const navigate = useNavigate();
   const handleLogin = async () => {
-    const navigate = useNavigate();
     try {
       navigate("/login");
     } catch (e) {
