@@ -7,7 +7,7 @@ const HomeComponent = ({ currentUser, setCurrentUser }) => {
     try {
       navigate("/login");
     } catch (e) {
-      console.log(message);
+      console.log(e);
     }
   };
   return (
