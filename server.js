@@ -9,6 +9,7 @@ const passport = require("passport");
 require("./config/passport")(passport);
 const cors = require("cors");
 const path = require("path");
+const port = process.env.PORT || 8080;
 
 //connect to mongo DB
 
@@ -50,6 +51,6 @@ if (
   });
 }
 
-app.listen(8080, () => {
+app.listen(port, () => {
   console.log("server in port 8080");
 });
