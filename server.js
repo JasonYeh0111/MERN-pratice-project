@@ -40,10 +40,7 @@ app.use(
   courseRouter
 );
 
-if (
-  process.env.NODE_ENV === "production" ||
-  process.env.NODE_ENV === "staging"
-) {
+if (process.env.NODE_ENV === "production") {
   app.get("*", (res, req) => {
     res.sendFile(path.join(path.join(__dirname, "/client/index.html")));
   });
