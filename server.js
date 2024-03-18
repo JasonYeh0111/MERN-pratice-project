@@ -25,7 +25,7 @@ mongoose
 app.use(express.json());
 app.use(express.urlencoded({ extend: true }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, "build", "index.html")));
+app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.use("/api/user", authRoute);
 
@@ -42,7 +42,8 @@ app.use(
 
 if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "/client/build/index.html"));
+    console.log("send!");
   });
 }
 
