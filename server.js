@@ -41,7 +41,7 @@ app.use(
 );
 
 if (process.env.NODE_ENV === "production") {
-  app.get("*", (res, req) => {
+  app.get("*", (rep, res) => {
     res.sendFile(path.join(path.join(__dirname, "/client/public/index.html")));
   });
 }
